@@ -22,3 +22,26 @@ let var2 = 'Jargon';
 
 console.log(var1.includes('on'))
 console.log(var2.includes('on'))
+
+// 6. I hope this course is not full of jargon. Check if jargon is in the sentence.
+let sentence = 'I hope this course is not full of jargon';
+console.log("Sentence: " + sentence.includes('jargon'));
+
+// 7. Generate a random number between 0 and 100 inclusively.
+let randNum = Math.floor(Math.random() * 100);
+console.log("Random number: " + randNum)
+
+// 8. Generate a random number between 50 and 100 inclusively.
+function getRandomArbitrary(min, max) {
+  return Math.floor(Math.random() * (max - min) + min);
+}
+console.log("Number between 50 and 100: " + getRandomArbitrary(50, 100));
+
+// 9. Generate a random number between 0 and 255 inclusively.
+let randNum2 = Math.floor((Math.random() * 255) + 1)
+console.log("Random number ex 9: " + randNum2)
+
+// 10. Access the 'JavaScript' string characters using a random number.
+let js = 'JavaScript'
+let randomLetter = Math.floor(Math.random() * js.length)
+console.log(js[randomLetter]);
