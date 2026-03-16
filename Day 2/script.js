@@ -63,3 +63,21 @@ console.log(string.search("because")); // 31
 // 20. Use trim() to remove any trailing whitespace at the beginning and the end of a string.E.g ' 30 Days Of JavaScript '.
 let spacedChallenge = ' 30 Days Of JavaScript ';
 console.log(spacedChallenge.trim());
+
+// 21. Use startsWith() method with the string 30 Days Of JavaScript and make the result true.
+console.log(challenge.startsWith("30"));
+
+// 22. Use endsWith() method with the string 30 Days Of JavaScript and make the result true.
+console.log(challenge.endsWith("JavaScript"));
+
+// 23. Use match() method to find all the a’s in 30 Days Of JavaScript.
+console.log(challenge.match(/a/g));
+
+// 24. Use concat() and merge '30 Days of' and 'JavaScript' to a single string, '30 Days Of JavaScript'.
+let start = '30 Days of';
+let end = 'JavaScript';
+
+console.log(start.concat(" ", end));
+
+// 25. Use repeat() method to print 30 Days Of JavaScript 2 times.
+console.log(challenge.repeat(2));
