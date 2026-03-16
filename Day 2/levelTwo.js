@@ -45,3 +45,10 @@ console.log("Random number ex 9: " + randNum2)
 let js = 'JavaScript'
 let randomLetter = Math.floor(Math.random() * js.length)
 console.log(js[randomLetter]);
+
+// 11. Use console.log() and escape characters to print the following pattern.
+console.log("1 1 1 1 1\n 2 1 2 4 8\n 3 1 3 9 27\n 4 1 4 16 64\n 5 1 5 25 125");
+
+// 12. Use substr to slice out the phrase because because because from the following sentence:'You cannot end a sentence with because because because is a conjunction'
+let lastSentence = 'You cannot end a sentence with because because because is a conjunction';
+console.log(lastSentence.slice(31, 54))
