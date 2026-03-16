@@ -46,3 +46,20 @@ console.log(challenge.charCodeAt('J')); // 51
 
 // 15. Use indexOf to determine the position of the first occurrence of a in 30 Days Of JavaScript.
 console.log(challenge.indexOf('a')); // 4
+
+// 16. Use lastIndexOf to determine the position of the last occurrence of a in 30 Days Of JavaScript.
+console.log(challenge.lastIndexOf('a')); // 14
+
+// 17. Use indexOf to find the position of the first occurrence of the word because in the following sentence:'You cannot end a sentence with because because because is a conjunction'.
+let string = 'You cannot end a sentence with because because because is a conjunction';
+console.log(string.indexOf("because")); // 31
+
+// 18. Use lastIndexOf to find the position of the last occurrence of the word because in the following sentence:'You cannot end a sentence with because because because is a conjunction'.
+console.log(string.lastIndexOf("because")); // 47
+
+// 19. Use search to find the position of the first occurrence of the word because in the following sentence:'You cannot end a sentence with because because because is a conjunction'
+console.log(string.search("because")); // 31
+
+// 20. Use trim() to remove any trailing whitespace at the beginning and the end of a string.E.g ' 30 Days Of JavaScript '.
+let spacedChallenge = ' 30 Days Of JavaScript ';
+console.log(spacedChallenge.trim());
