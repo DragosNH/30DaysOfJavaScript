@@ -64,7 +64,62 @@ console.log(weeklyEarning);
 
 // 10. If the length of your name is greater than 7 say, your name is long else say your name is short.
 console.log("--- Ex. 10 ---");
-let name = 'Dragos';
-name.lenght > 7 ? console.log("Your name is long") : console.log('Your name is short');
-;
+let firstName = 'Dragos';
+firstName.lenght > 7 ? console.log("Your name is long") : console.log('Your name is short');
 
+// 11. Compare your first name length and your family name length and you should get this output.
+console.log("--- Ex. 11 ---");
+let lastName = 'Enache';
+
+firstName.length > lastName.length
+? console.log(`Your first name ${firstName} is longer than your last name ${lastName}`)
+: firstName.length < lastName.length
+? console.log(`Your last name ${lastName} is longer than your first name ${firstName}`)
+: console.log(`${firstName} and ${lastName} are equal`);
+
+// 12. Declare two variables myAge and yourAge and assign them initial values and myAge and yourAge. 
+console.log("--- Ex. 12 ---");
+let myAge = 250;
+let yourAge = 25;
+
+myAge > yourAge ? console.log('I am older than you') : console.log('You are older than me');
+
+// 13. Using prompt get the year the user was born and if the user is 18 or above allow the user to drive if not tell the user to wait a certain amount of years.
+/*
+Enter birth year: 1995
+You are 25. You are old enough to drive
+
+Enter birth year: 2005
+You are 15. You will be allowed to drive after 3 years.
+*/
+
+console.log("--- Ex. 13 ---");
+let apropiateDrivingAge = new Date().getFullYear() - 2005;
+let drivingAge = 18;
+let inapropiateDrivingAge = new Date().getFullYear() - 2015;
+
+apropiateDrivingAge > 18 ? console.log(`You are ${drivingAge}. You are old enough to drive`) : console.log(`You are ${inapropiateDrivingAge}. You will be allowed to drive after ${ drivingAge - inapropiateDrivingAge} years.`);
+
+// 14. Write a script that prompt the user to enter number of years. Calculate the number of seconds a person can live. Assume some one lives just hundred years.
+console.log("--- Ex. 14 ---");
+const years = 100; 
+const secondsInYear = 60 * 60 * 24 * 365; 
+const totalSeconds = years * secondsInYear;
+console.log(`You lived ${totalSeconds} seconds.`);
+
+// 15. Create a human readable time format using the Date time object.
+/* 
+YYYY-MM-DD HH:mm
+DD-MM-YYYY HH:mm
+DD/MM/YYYY HH:mm
+*/
+
+console.log("--- Ex. 15 ---");
+let currentYear = new Date().getFullYear();
+let currentMonth = new Date().getMonth();
+let currentDay = new Date().getDate();
+let currentHour = new Date().getHours();
+let currentMinute = new Date().getMinutes();
+
+console.log(`${currentYear}/${currentMonth + 1}/${currentDay} ${currentHour}:${currentMinute}`);
+console.log(`${currentDay}/${currentMonth + 1}/${currentYear} ${currentHour}:${currentMinute}`);
