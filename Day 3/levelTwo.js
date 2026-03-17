@@ -32,7 +32,39 @@ let circle = 2 * pi * r;
 console.log(`Area: ${area} | Circle: ${circle}`);
 
 // 5. Calculate the slope, x-intercept and y-intercept of y = 2x -2
-console.log("--- Ex. 4 ---");
+console.log("--- Ex. 5 ---");
 let x = 5;
 let y = 2 * x - 2;
 console.log(`y-intercept: ${y}`);
+
+// 6. Slope is m = (y2-y1)/(x2-x1). Find the slope between point (2, 2) and point(6,10)
+console.log("--- Ex. 6 ---");
+x = (6 - 10);
+y = (2 - 2);
+let m =  y / x;
+console.log(m);
+
+// 7. Compare the slope of above two questions.
+console.log("--- Ex. 7 ---");
+y = 2 * x - 2;
+console.log(m);
+
+// 8. Calculate the value of y (y = x2 + 6x + 9). Try to use different x values and figure out at what x value y is 0.
+console.log("--- Ex. 8 ---");
+x = 5;
+y = x * 2 + 6 * x + 9;
+console.log(y);
+
+// 9. Write a script that prompt a user to enter hours and rate per hour. Calculate pay of the person?
+console.log("--- Ex. 9 ---");
+let hours = 25;
+let ratePerHour = 12.5;
+let weeklyEarning = hours * ratePerHour;
+console.log(weeklyEarning);
+
+// 10. If the length of your name is greater than 7 say, your name is long else say your name is short.
+console.log("--- Ex. 10 ---");
+let name = 'Dragos';
+name.lenght > 7 ? console.log("Your name is long") : console.log('Your name is short');
+;
+
