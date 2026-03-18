@@ -13,7 +13,9 @@ let min = new Date().getMinutes();
 // console.log(`${currentDay}/${currentMonth + 1}/${currentYear} ${currentHour}:${currentMinute}`);
 
 m <= 9 ? 
-console.log(`${y}/0${m}/${d}`) 
+console.log(`${y}/0${m}/${d} ${h}:${m}`) 
 : d <= 9 
-? console.log(`${y}/${m}/0${d}`)
-: console.log(`${y}/${m}/${d}`);
+? console.log(`${y}/${m}/0${d} ${h}:${m}`)
+: d <= 9 &&  m <= 9
+? console.log(`${y}/0${m}/0${d} ${h}:${m}`):
+console.log(`${y}/${m}/${d} ${h}:${m}`);
