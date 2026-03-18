@@ -5,17 +5,13 @@
 
 let y = new Date().getFullYear();
 let m = new Date().getMonth() + 1;
+m = m <= 9 ? `0${m}` : `${m}`;
 let d = new Date().getDate();
+d = d <= 9 ? `0${d}` : `${d}`;
 let h = new Date().getHours();
+h = h <= 9 ? `0${h}` : `${h}`;
 let min = new Date().getMinutes();
+min = min <= 9 ? `0${min}` : `${min}`;
 
-// console.log(`${currentYear}/${currentMonth + 1}/${currentDay} ${currentHour}:${currentMinute}`);
-// console.log(`${currentDay}/${currentMonth + 1}/${currentYear} ${currentHour}:${currentMinute}`);
-
-m <= 9 ? 
-console.log(`${y}/0${m}/${d} ${h}:${m}`) 
-: d <= 9 
-? console.log(`${y}/${m}/0${d} ${h}:${m}`)
-: d <= 9 &&  m <= 9
-? console.log(`${y}/0${m}/0${d} ${h}:${m}`):
-console.log(`${y}/${m}/${d} ${h}:${m}`);
+console.log(`--- Level 3 ---`) 
+console.log(`${y}/${m}/${d} ${h}:${m}`) 
