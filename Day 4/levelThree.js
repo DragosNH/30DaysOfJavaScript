@@ -3,7 +3,8 @@ console.log("--- Level 3 ---");
 
 // 1. Write a program which tells the number of days in a month.
 let month = prompt("Insert a month:").toLowerCase();
-
+// --- Long Version ---
+/*
 switch (month) {
     case "january":
         console.log("January has 31 days.");
@@ -43,4 +44,29 @@ switch (month) {
         break;
     default:
         console.log("Enter a valid value");
+}
+*/
+
+// --- Short Version ---
+switch (month) {
+    // - 31 Days -
+    case "january":
+    case "march":
+    case "may":
+    case "july":
+    case "august":
+    case "october":
+    case "december":
+        console.log(`${month.charAt(0).toUpperCase() + month.slice(1)} has 31 days.`);
+        break;
+    // - 30 Days -
+    case "april":
+    case "june":
+    case "september":
+    case "november":
+        console.log(`${month.charAt(0).toUpperCase() + month.slice(1)} has 30 days.`);
+        break;
+    case "february":
+        console.log(`${month.charAt(0).toUpperCase() + month.slice(1)} has 28 days.`);
+        break;
 }
