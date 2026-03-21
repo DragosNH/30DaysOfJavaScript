@@ -2,9 +2,12 @@
 console.log("--- Level 3 ---");
 
 // 1. Write a program which tells the number of days in a month.
+let leapYear = confirm("Is it a leap year?")
 let month = prompt("Insert a month:").toLowerCase();
 // --- Long Version ---
-/*
+console.log("--- Ex 1 ---");
+console.log("- Long Version of the code -");
+
 switch (month) {
     case "january":
         console.log("January has 31 days.");
@@ -45,8 +48,8 @@ switch (month) {
     default:
         console.log("Enter a valid value");
 }
-*/
 
+console.log("- Short Version of the code -");
 // --- Short Version ---
 switch (month) {
     // - 31 Days -
@@ -69,4 +72,37 @@ switch (month) {
     case "february":
         console.log(`${month.charAt(0).toUpperCase() + month.slice(1)} has 28 days.`);
         break;
+}
+
+// confirm("Press a button!");
+// 2. Write a program which tells the number of days in a month, now consider leap year.
+console.log("--- Ex 2 ---");
+
+switch (month) {
+    // - 31 Days -
+    case "january":
+    case "march":
+    case "may":
+    case "july":
+    case "august":
+    case "october":
+    case "december":
+        console.log(`${month.charAt(0).toUpperCase() + month.slice(1)} has 31 days.`);
+        break;
+    // - 30 Days -
+    case "april":
+    case "june":
+    case "september":
+    case "november":
+        console.log(`${month.charAt(0).toUpperCase() + month.slice(1)} has 30 days.`);
+        break;
+    case "february":
+        case leapYear:
+            console.log(`${month.charAt(0).toUpperCase() + month.slice(1)} has 29 days.`);
+            break;
+        case !leapYear:
+            console.log(`${month.charAt(0).toUpperCase() + month.slice(1)} has 28 days.`);
+    default:
+        console.log("You must enetr a valid value");
+        
 }
