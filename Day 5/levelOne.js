@@ -69,3 +69,80 @@ console.log(itCompanies[3]);
 console.log(itCompanies[4]);
 console.log(itCompanies[5]);
 console.log(itCompanies[6]);
+
+// 11. Change each company name to uppercase one by one and print them out.
+console.log("--- Ex 11 ---");
+console.log(itCompanies[0].toUpperCase());
+console.log(itCompanies[1].toUpperCase());
+console.log(itCompanies[2].toUpperCase());
+console.log(itCompanies[3].toUpperCase());
+console.log(itCompanies[4].toUpperCase());
+console.log(itCompanies[5].toUpperCase());
+console.log(itCompanies[6].toUpperCase());
+
+// 12. Print the array like as a sentence: Facebook, Google, Microsoft, Apple, IBM,Oracle and Amazon are big IT companies.
+console.log("--- Ex 12 ---");
+console.log("Facebook, Google, Microsoft, Apple, IBM,Oracle and Amazon are big IT companies");
+
+// 13. Check if a certain company exists in the itCompanies array. If it exist return the company else return a company is not found.
+console.log("--- Ex 13 ---");
+console.log("- If exists -");
+
+if (itCompanies.includes("Facebook")){
+    console.log("Facebook");
+}else{
+    console.log("Company not found");
+}
+
+console.log("- If does not exists -");
+
+if (itCompanies.includes("Meta")){
+    console.log("Facebook");
+}else{
+    console.log("Company not found");
+}
+
+// 14. Filter out companies which have more than one 'o' without the filter method.
+console.log("--- Ex 14 ---");
+let result = [];
+
+// Facebook
+if (itCompanies[0].toLowerCase().split("o").length - 1 > 1) {
+    result.push(itCompanies[0]);
+}
+
+// Google
+if (itCompanies[1].toLowerCase().split("o").length - 1 > 1) {
+    result.push(itCompanies[1]);
+}
+
+// Microsoft
+if (itCompanies[2].toLowerCase().split("o").length - 1 > 1) {
+    result.push(itCompanies[2]);
+}
+
+// Apple
+if (itCompanies[3].toLowerCase().split("o").length - 1 > 1) {
+    result.push(itCompanies[3]);
+}
+
+// IBM
+if (itCompanies[4].toLowerCase().split("o").length - 1 > 1) {
+    result.push(itCompanies[4]);
+}
+
+// Oracle
+if (itCompanies[5].toLowerCase().split("o").length - 1 > 1) {
+    result.push(itCompanies[5]);
+}
+
+// Amazon
+if (itCompanies[6].toLowerCase().split("o").length - 1 > 1) {
+    result.push(itCompanies[6]);
+}
+
+console.log(result);
+
+// 15. Sort the array using sort() method.
+console.log("--- Ex 15 ---");
+console.log(itCompanies.sort());
