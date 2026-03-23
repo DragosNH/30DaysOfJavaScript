@@ -166,4 +166,18 @@ console.log(midCompany);
 
 // 20.Remove the first IT company from the array.
 console.log("--- Ex 20 ---");
-console.log(itCompanies.shift());
+let firstCompany = itCompanies.shift();
+console.log(firstCompany);
+
+// 21. Remove the middle IT company or companies from the array.
+
+// 22. Remove the last IT company from the array.
+console.log("--- Ex 22 ---");
+let lastCompany = itCompanies.pop()
+console.log(lastCompany);
+
+// 23. Remove all IT companies.
+console.log("--- Ex 23 ---");
+
+const allRemoved = itCompanies.splice();
+console.log(allRemoved);
