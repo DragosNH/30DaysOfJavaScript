@@ -147,3 +147,51 @@ for (let i = 0; i <= 100; i++) {
 }
 
 console.log(`The sum of all numbers from 0 to 100 is ${sum}`);
+
+// 11. Use for loop to iterate from 0 to 100 and print the sum of all evens and the sum of all odds.
+console.log("--- Ex 11 ---");
+
+let sumEvens = 0;
+let sumOdds = 0;
+
+for (let i = 0; i <= 100; i++) {
+    if(i % 2 === 0){
+        sumEvens += i;
+    }
+}
+
+for(let i = 0; i <= 100; i++){
+    if (i % 2 !== 0){
+        sumOdds += i;
+    }
+}
+
+console.log(`The sum of all evens from 0 to 100 is ${sumEvens}. And the sum of all odds from 0 to 100 is ${sumOdds}.`);
+
+// 12. Use for loop to iterate from 0 to 100 and print the sum of all evens and the sum of all odds. Print sum of evens and sum of odds as array.
+console.log("--- Ex 12 ---");
+
+console.log(`[${sumEvens}, ${sumOdds}]`);
+
+// 13. Develop a small script which generate array of 5 random numbers.
+console.log("--- Ex 13 ---");
+const randomNumbers = [];
+for (let i = 0; i < 5; i++) {
+  randomNumbers.push(Math.floor(Math.random() * 10) + 1);
+}
+console.log(randomNumbers);   
+
+// 14.Develop a small script which generate array of 5 random numbers and the numbers must be unique.
+
+// 15. Develop a small script which generate a six characters random id.
+console.log("--- Ex 15 ---");
+
+let result = '';
+let characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+
+for (let i = 0; i < 6; i++) {
+    let randomIndex = Math.floor(Math.random() * characters.length);
+    result += characters.charAt(randomIndex);
+}
+
+console.log(result);
