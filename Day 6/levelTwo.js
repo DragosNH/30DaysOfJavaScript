@@ -13,3 +13,74 @@ for (let i = 0; i <= randomNumber; i++) {
 }
 
 console.log(result);
+
+// 2. Write a script which generates a random hexadecimal number.
+console.log("--- Ex 2 ---");
+let hexCode = '#';
+let hexCharacters = '123456789ABCDEF';
+
+for (let i = 0; i < 6; i++){
+    let randomIndex = Math.floor(Math.random() * hexCharacters.length);
+    hexCode += hexCharacters.charAt(randomIndex);
+}
+
+console.log(hexCode);
+
+// 3. Write a script which generates a random rgb color number.
+console.log("--- Ex 3 ---");
+
+let rgb = 0;
+let rgbMaxValue = 355; 
+let randomValue1 = Math.floor(Math.random() * rgbMaxValue);
+let randomValue2 = Math.floor(Math.random() * rgbMaxValue);
+let randomValue3 = Math.floor(Math.random() * rgbMaxValue);
+
+for (let i = 0; i <= rgbMaxValue; i++){
+    rgb += randomValue1
+    rgb += randomValue2
+    rgb += randomValue3
+}
+
+console.log(`rgb(${randomValue1}, ${randomValue2}, ${randomValue3})`);
+
+// 4. Using the above countries array, create the following new array.
+console.log("--- Ex 4 ---");
+const countries = [
+  'Albania',
+  'Bolivia',
+  'Canada',
+  'Denmark',
+  'Ethiopia',
+  'Finland',
+  'Germany',
+  'Hungary',
+  'Ireland',
+  'Japan',
+  'Kenya'
+]
+
+let countriesListed = [];
+let upperCountriesListed = [];
+
+for (let i = 0; i < countries.length; i++) {
+    countriesListed.push(countries[i]);
+}
+
+for (let i = 0; i < countriesListed.length; i++) {
+    upperCountriesListed.push(
+        countriesListed[i].toUpperCase()
+    );
+}
+
+console.log(upperCountriesListed);
+
+// 5. Using the above countries array, create an array for countries length'.
+console.log("--- Ex 5 ---");
+
+let countriesLen = [];
+
+for (let i = 0; i < countries.length; i++) {
+    countriesLen.push(countries[i].length);
+}
+
+console.log(countriesLen);
