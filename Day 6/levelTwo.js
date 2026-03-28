@@ -165,3 +165,38 @@ for (let i = 0; i < countries.length; i++){
 }
 
 console.log(fiveCharCountries);
+
+// 11. Find the longest word in the webTechs array.
+console.log("--- Ex 11 ---");
+
+const webTechs = [
+  'HTML',
+  'CSS',
+  'JavaScript',
+  'React',
+  'Redux',
+  'Node',
+  'MongoDB'
+]
+
+const longestWeb = [];
+
+for(let i = 0; i < webTechs.length; i++){
+    if(webTechs[i].length > 7){
+        longestWeb.push(webTechs[i]);
+    };
+};
+
+console.log(longestWeb);
+
+// 12. Use the webTechs array to create the following array of arrays:
+// [["HTML", 4], ["CSS", 3],["JavaScript", 10],["React", 5],["Redux", 5],["Node", 4],["MongoDB", 7]]
+console.log("--- Ex 12 ---");
+
+let webList = [];
+
+for (let i = 0; i < webTechs.length; i++) {
+    webList.push([webTechs[i], webTechs[i].length]);
+}
+
+console.log(webList);
