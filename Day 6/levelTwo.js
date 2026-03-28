@@ -84,3 +84,84 @@ for (let i = 0; i < countries.length; i++) {
 }
 
 console.log(countriesLen);
+
+// 6. Use the countries array to create the following array of arrays:
+/*
+  [
+  ['Albania', 'ALB', 7],
+  ['Bolivia', 'BOL', 7],
+  ['Canada', 'CAN', 6],
+  ['Denmark', 'DEN', 7],
+  ['Ethiopia', 'ETH', 8],
+  ['Finland', 'FIN', 7],
+  ['Germany', 'GER', 7],
+  ['Hungary', 'HUN', 7],
+  ['Ireland', 'IRE', 7],
+  ['Iceland', 'ICE', 7],
+  ['Japan', 'JAP', 5],
+  ['Kenya', 'KEN', 5]
+]
+*/
+
+console.log("--- Ex 6 ---");
+
+countriesListed = [];
+countriesLen = [];
+let countriesInitials = [];
+
+for (let i = 0; i < countries.length; i++) {
+    countriesListed.push(countries[i]);
+    countriesInitials.push(
+        countries[i].slice(0, 3).toUpperCase()
+    );
+    countriesLen.push(countries[i].length);
+    console.log(`[${countriesListed[i]}, ${countriesInitials[i]}, ${countriesLen[i]}]`);
+}
+
+// 7. In above countries array, check if there is a country or countries containing the word 'land'. If there are countries containing 'land', print it as array. If there is no country containing the word 'land', print 'All these countries are without land'.
+console.log("--- Ex 7 ---");
+
+let landCountries = [];
+for (let i = 0; i < countries.length; i++) {
+    if (countries[i].includes('land')) {
+        landCountries.push(countries[i]);
+    }
+}
+
+console.log(landCountries);
+
+// 8. In above countries array, check if there is a country or countries end with a substring 'ia'. If there are countries end with, print it as array. If there is no country containing the word 'ai', print 'These are countries ends without ia'.
+console.log("--- Ex 8 ---");
+
+let iaCountries = [];
+for (let i = 0; i < countries.length; i++){
+    if (countries[i].includes('ia')) {
+        iaCountries.push(countries[i]);
+    }
+}
+console.log(iaCountries);
+
+// 9. Using the above countries array, find the country containing the biggest number of characters.
+console.log("--- Ex 9 ---");
+
+let biggestValue = [];
+for (let i = 0; i < countries.length; i++){
+    if(countries[i].length > 7){
+        biggestValue.push(countries[i]);
+    };
+};
+
+console.log(biggestValue);
+
+// 10. Using the above countries array, find the country containing only 5 characters.
+console.log("--- Ex 10 ---");
+
+let fiveCharCountries = [];
+
+for (let i = 0; i < countries.length; i++){
+    if(countries[i].length === 5){
+        fiveCharCountries.push(countries[i])
+    }
+}
+
+console.log(fiveCharCountries);
