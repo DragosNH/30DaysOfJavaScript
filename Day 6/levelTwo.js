@@ -227,6 +227,7 @@ console.log(`${iteratedWebTecs}`);
 
 
 // 15. This is a fruit array , ['banana', 'orange', 'mango', 'lemon'] reverse the order using loop without using a reverse method.
+console.log("--- Ex 15 ---");
 
 const fruitArray = ['banana', 'orange', 'mango', 'lemon'];
 const reversedFruit = []
@@ -235,3 +236,28 @@ for(let i = fruitArray.length-1; i >= 0; i--){
 }
 
 console.log(reversedFruit);
+
+// 16. Print all the elements of array as shown below.
+/* 
+  HTML
+  CSS
+  JS
+  REACT
+  NODE
+  EXPRESS
+  MONGODB
+*/
+console.log("--- Ex 16 ---");
+
+const fullStack = [
+    ['HTML', 'CSS', 'JS', 'React'],
+    ['Node', 'Express', 'MongoDB']
+]
+
+let newFullStack = [];
+
+for (let i = 0; i < fullStack.length; i++){
+    newFullStack.push(fullStack[i]);
+}
+
+console.log(`${newFullStack}`);
