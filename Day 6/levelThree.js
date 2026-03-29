@@ -274,4 +274,36 @@ console.log("--- Ex 6 ---");
 
 console.log(landCountries);
 
-7.
+// 7. Extract all the countries containing only four characters from the countries array and print it as array.
+
+const fourCharCountries = [];
+
+for (let i = 0; i < countriesList.length; i++){
+    if(countriesList[i].length === 4){
+        fourCharCountries.push(countriesList[i]);
+    }
+}
+
+console.log(fourCharCountries);
+
+
+// 8. Extract all the countries containing two or more words from the countries array and print it as array.
+
+const twoWordsCountries = [];
+
+for(let i = 0; i < countriesList.length; i++){
+    if(countriesList[i].includes(" ")){
+        twoWordsCountries.push(countriesList[i]);
+    }
+}
+
+console.log(twoWordsCountries);
+
+// 9. Reverse the countries array and capitalize each country and stored it as an array.
+const reversedCountriesList = [];
+
+for(let i = countriesList.length - 1; i >= 0; i--){
+    reversedCountriesList.push(countriesList[i].toUpperCase())
+}
+
+console.log(reversedCountriesList);
