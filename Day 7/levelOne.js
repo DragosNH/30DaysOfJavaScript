@@ -95,3 +95,101 @@ const calculateSpeed = (distance, time) => {
 }
 
 calculateSpeed(12, 0.5);
+
+// 11. Weight of a substance is calculated as follows: weight = mass x gravity. Write a function which calculates weight.
+console.log("--- Ex 11 ---");
+
+const calculatedSubstance = (mass, gravity) => {
+    let weight = mass * gravity;
+    console.log(`The mass ${mass} and gravity ${gravity} have a weight of ${weight}`);
+}
+
+calculatedSubstance(15, 22);
+
+// 12. Temperature in oC can be converted to oF using this formula: oF = (oC x 9/5) + 32. Write a function which convert oC to oF convertCelsiusToFahrenheit.
+console.log("--- Ex 12 ---");
+
+const convertCelsiusToFahrenheit = c => {
+    let f = (c * 9 / 5) + 32;
+    console.log(`${c}°C are ${f}°F `);
+}
+
+convertCelsiusToFahrenheit(15);
+
+// 13. Body mass index(BMI) is calculated as follows: bmi = weight in Kg / (height x height) in m2. Write a function which calculates bmi. BMI is used to broadly define different weight groups in adults 20 years old or older.Check if a person is underweight, normal, overweight or obese based the information given below.
+console.log("--- Ex 13 ---");
+
+/* 
+The same groups apply to both men and women.
+Underweight: BMI is less than 18.5
+Normal weight: BMI is 18.5 to 24.9
+Overweight: BMI is 25 to 29.9
+Obese: BMI is 30 or more
+*/
+
+const bmiCalculator = (height, weight) => {
+    let bmi = weight / (height * height);
+
+    if(bmi < 18.5){
+        console.log(`${bmi}kg, the person is Underweight`);
+    } else if(bmi > 18.5 && bmi < 24.9) {
+        console.log(`${bmi}kg the person is Normal weight`);
+    } else if(bmi > 25 && bmi < 29.9){
+        console.log(`${bmi}kg the person is Overweight`);
+    } else {
+        console.log(`${bmi}kg the person is Obese`);
+    }
+}
+
+bmiCalculator(1.80, 82);
+
+// 14. Write a function called checkSeason, it takes a month parameter and returns the season:Autumn, Winter, Spring or Summer.
+console.log("--- Ex 14 ---");
+
+const checkSeason = season => {
+    switch (season){
+        case "December":
+        case "January":
+        case "February":
+            console.log("Winter");
+            break;
+        case "March":
+        case "April":
+        case "May":
+            console.log("Spring");
+            break;
+        case "June":
+        case "Jully":
+        case "August":
+            console.log("Summer");
+            break
+        case "September":    
+        case "October":    
+        case "November":
+            console.log("Autumn / Fall");
+            break;
+        default:
+            console.log("Misspelled or not a season");
+    }
+}
+
+checkSeason("January");
+checkSeason("March");
+checkSeason("September");
+checkSeason("December");
+checkSeason("Yes");
+
+// 15.Math.max returns its largest argument. Write a function findMax that takes three arguments and returns their maximum with out using Math.max method.
+console.log("--- Ex 15 ---");
+
+const returnMax = (val1, val2, val3) => {
+    if(val1 > val2 && val1 > val3){
+        console.log(`${val1}`);
+    } else if (val2 > val1 && val2 > val3){
+        console.log(`${val2}`);
+    }else if (val3 > val1 && val3 > val2){
+        console.log(`${val3}`);
+    }
+}
+
+returnMax(30, 25, 15)
