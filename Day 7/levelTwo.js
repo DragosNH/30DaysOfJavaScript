@@ -85,6 +85,7 @@ const showDateTime = () => {
 showDateTime()
 
 // 5. Declare a function name swapValues. This function swaps value of x to y.
+console.log("--- Ex 5 ---");
 
 const swapValues = (x, y) => {
     let z = x;
@@ -94,3 +95,61 @@ const swapValues = (x, y) => {
 }
 
 swapValues(5,10)
+
+// 6. Declare a function name reverseArray. It takes array as a parameter and it returns the reverse of the array (don't use method).
+console.log("--- Ex 6 ---");
+
+const reverseArray = arr => {
+    let newArr = []
+    for(let i = 0; i < arr.length; i++){
+        newArr.unshift(arr[i]);
+    }
+    return newArr;
+}
+
+console.log(reverseArray([1, 2, 3, 4, 5]))
+//[5, 4, 3, 2, 1]
+console.log(reverseArray(['A', 'B', 'C']))
+//['C', 'B', 'A']
+
+// 7.Declare a function name capitalizeArray. It takes array as a parameter and it returns the - capitalizedarray
+console.log("--- Ex 7 ---");
+
+const capitalizeArray = arr => {
+    let newArr = [];
+    for (let i = 0; i < arr.length; i++){
+        newArr.push(arr[i].toUpperCase());
+    }
+
+    console.log(newArr);   
+}
+
+capitalizeArray(["a", "b", "c"]);
+
+// 8. Declare a function name addItem. It takes an item parameter and it returns an array after adding the item.
+console.log("--- Ex 8 ---");
+
+let addedItem = [];
+const addItem = item => {
+    addedItem.push(item);
+    console.log(addedItem);
+    
+}
+
+addItem("one");
+addItem("two");
+addItem(1);
+addItem(true);
+
+// 9. Declare a function name removeItem. It takes an index parameter and it returns an array after removing an item.
+
+const removedItemFromArr = ["John", "Bob", "George", "Elon", "Joe"];
+
+const removeItem = index => {
+    removedItemFromArr.splice(index, 1);
+    console.log(removedItemFromArr);
+}
+
+removeItem(3);
+
+// 10. Declare a function name sumOfNumbers. It takes a number parameter and it adds all the numbers in that range.
