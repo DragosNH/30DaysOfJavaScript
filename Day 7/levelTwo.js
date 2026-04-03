@@ -239,32 +239,73 @@ sum(1, 2, 3, 4);
 console.log("--- Ex 15 ---");
 
 const randomUserIp = () => {
-    let characters = "0123456789abcdefghijklmnopqrstvxyz";
+    let characters = "0123456789abcdefghijklmnopqrstvwxyz";
     let one = Math.floor((Math.random() * 9999) + 1000);
     let two = Math.floor((Math.random() * 999) + 100);
-    let three = "";
-    let four = "";
-    let five = "";
-    let six = "";
-    let seven = "";
-    let eight = "";
 
-    for(let i = 0; i < 4; i++){
-        let index1 = Math.floor(Math.random() * characters.length);
-        let index2 = Math.floor(Math.random() * characters.length);
-        let index3 = Math.floor(Math.random() * characters.length);
-        let index4 = Math.floor(Math.random() * characters.length);
-        let index5 = Math.floor(Math.random() * characters.length);
-        let index6 = Math.floor(Math.random() * characters.length);
-        three += characters[index1];
-        four += characters[index2];
-        five += characters[index3];
-        six += characters[index4];
-        seven += characters[index5];
-        eight += characters[index6];
+    const randCharacters = () => {
+        let num = "";
+
+        for(let i = 0; i < 4; i++){
+            let index = Math.floor(Math.random() * characters.length)
+            num += characters[index]
+        }
+        return num;
     }
 
-    console.log(`IP: ${one}:${two}:${three}:${four}:${five}:${six}:${seven}:${eight}`);
+    console.log(`IP: ${one}:${two}:${randCharacters()}:${randCharacters()}:${randCharacters()}:${randCharacters()}:${randCharacters()}:${randCharacters()}`);
 }
 
-randomUserIp()
+randomUserIp();
+
+
+// 16.Write a function which generates a randomMacAddress.
+console.log("--- Ex 16 ---");
+
+const macAdress = () => {
+    let characters = "0123456789ABCDEF";
+
+    const randomPair = () => {
+        return characters[Math.floor((Math.random() * (characters.length - 6)))] +
+               characters[Math.floor((Math.random() * (characters.length - 10) + 10))];
+    };
+
+
+    console.log(`${randomPair()}:${randomPair()}:${randomPair()}:${randomPair()}:${randomPair()}:${randomPair()}:${randomPair()}:${randomPair()}`);
+    
+    
+}
+
+macAdress();
+
+// 17. Declare a function name randomHexaNumberGenerator. When this function is called it generates a random hexadecimal number. The function return the hexadecimal number.
+console.log("--- Ex 17 ---");
+
+ const randomHexaNumberGenerator = () => {
+    let values = "0123456789ABCDEF";
+    let hex = "";
+    for(let i = 0; i < 6; i++){
+        let index = Math.floor(Math.random() * values.length);
+        hex += values[index];
+    }
+
+    return `#${hex}`
+ }
+
+ console.log(randomHexaNumberGenerator());
+ 
+
+//  18. Declare a function name userIdGenerator. When this function is called it generates seven character id. The function return the id.
+console.log("--- Ex 18 ---");
+
+const userIdGenerator = () => {
+    let characters = "0123456789ABCDEFGHIJKLMNOPQRSTVWXYZ";
+    let id = "";
+    for(let i = 0; i < 7; i++){
+        let index = Math.floor(Math.random() * characters.length);
+        id += characters[index];
+    }
+    console.log(id);
+}
+
+userIdGenerator()
