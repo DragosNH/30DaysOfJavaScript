@@ -142,6 +142,7 @@ addItem(1);
 addItem(true);
 
 // 9. Declare a function name removeItem. It takes an index parameter and it returns an array after removing an item.
+console.log("--- Ex 9 ---");
 
 const removedItemFromArr = ["John", "Bob", "George", "Elon", "Joe"];
 
@@ -153,3 +154,117 @@ const removeItem = index => {
 removeItem(3);
 
 // 10. Declare a function name sumOfNumbers. It takes a number parameter and it adds all the numbers in that range.
+console.log("--- Ex 10 ---");
+
+const sumOfNumbers = range => {
+    let sum = 0;
+
+    for (let i = 0; i <= range; i++) {
+        sum += i;
+    }
+
+    console.log(sum);
+}
+
+sumOfNumbers(10)
+
+
+// 11. Declare a function name sumOfOdds. It takes a number parameter and it adds all the odd numbers in that - range.
+console.log("--- Ex 11 ---");
+
+const sumOfOdds = range => {
+    let sum = 0;
+
+    for (let i = 0; i <= range; i++) {
+        if (i % 2 !== 0) {
+            sum += i;
+        }
+    }
+
+    console.log(sum);
+}
+
+sumOfOdds(10);
+
+// 12. Declare a function name sumOfEven. It takes a number parameter and it adds all the even numbers in that - range.
+console.log("--- Ex 12 ---");
+
+const sumOfEven = range => {
+    let sum = 0;
+
+    for(let i = 0; i <= range; i++){
+        if(i % 2 === 0){
+            sum += i;
+        }
+    }
+
+    console.log(sum);
+}
+
+sumOfEven(10);
+
+// 13. Declare a function name evensAndOdds . It takes a positive integer as parameter and it counts number of evens and odds in the number.
+console.log("--- Ex 13 ---");
+
+const evensAndOdds = range => {
+    let even = 0;
+    let odd = 0;
+
+    for(let i = 0; i <= range; i++){
+        if(i % 2 === 0){
+            even++;
+        }
+
+        if(i % 2 !== 0){
+            odd++;
+        }
+    }
+
+    console.log(`The number of odds are ${odd}.\nThe number of evens are ${even}.`);
+}
+
+evensAndOdds(100);
+
+// 14. Write a function which takes any number of arguments and return the sum of the arguments.
+console.log("--- Ex 14 ---");
+
+const sum = (...arg) => {
+    console.log(arg.reduce((acc, cur) => acc + cur, 0));
+}
+
+sum(1, 2, 3);
+sum(1, 2, 3, 4);
+
+// 15. Write a function which generates a randomUserIp.
+console.log("--- Ex 15 ---");
+
+const randomUserIp = () => {
+    let characters = "0123456789abcdefghijklmnopqrstvxyz";
+    let one = Math.floor((Math.random() * 9999) + 1000);
+    let two = Math.floor((Math.random() * 999) + 100);
+    let three = "";
+    let four = "";
+    let five = "";
+    let six = "";
+    let seven = "";
+    let eight = "";
+
+    for(let i = 0; i < 4; i++){
+        let index1 = Math.floor(Math.random() * characters.length);
+        let index2 = Math.floor(Math.random() * characters.length);
+        let index3 = Math.floor(Math.random() * characters.length);
+        let index4 = Math.floor(Math.random() * characters.length);
+        let index5 = Math.floor(Math.random() * characters.length);
+        let index6 = Math.floor(Math.random() * characters.length);
+        three += characters[index1];
+        four += characters[index2];
+        five += characters[index3];
+        six += characters[index4];
+        seven += characters[index5];
+        eight += characters[index6];
+    }
+
+    console.log(`IP: ${one}:${two}:${three}:${four}:${five}:${six}:${seven}:${eight}`);
+}
+
+randomUserIp()
