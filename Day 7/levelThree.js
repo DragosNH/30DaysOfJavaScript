@@ -68,3 +68,26 @@ arrayOfHexaColors(5);
 // 4. Write a function arrayOfRgbColors which return any number of RGB colors in an array.
 console.log("--- Ex 4 ---");
 
+const arrayOfRgbColors = num => {
+    let rgbArray = [];
+
+    const rgbFun = () => {
+        let randomColor = Math.floor(Math.random() * 255);
+        if(randomColor < 10){
+            return `00${randomColor}`
+        } else if(randomColor < 100){
+            return `0${randomColor}`
+        }
+
+        return randomColor
+    }
+
+    for(let i = 0; i < num; i++){
+        rgbArray.push(`rgb(${rgbFun()},${rgbFun()},${rgbFun()})`);
+    }
+
+    console.log(rgbArray);
+    
+}
+
+arrayOfRgbColors(3)
