@@ -90,4 +90,33 @@ const arrayOfRgbColors = num => {
     
 }
 
-arrayOfRgbColors(3)
+arrayOfRgbColors(3);
+
+// 5. Write a function convertHexaToRgb which converts hexa color to rgb and it returns an rgb color.
+console.log("--- Ex 5 ---");
+
+function convertHexaToRgb(hex) {
+  hex = hex.replace('#', '');
+  
+  if (hex.length === 3) {
+    hex = hex.split('').map(c => c + c).join('');
+  }
+
+  const r = parseInt(hex.substring(0, 2), 16);
+  const g = parseInt(hex.substring(2, 4), 16);
+  const b = parseInt(hex.substring(4, 6), 16);
+
+  return `rgb(${r}, ${g}, ${b})`;
+}   
+
+
+console.log(convertHexaToRgb('#51f1f1'));
+
+// 6. Write a function convertRgbToHexa which converts rgb to hexa color and it returns an hexa color.
+console.log("--- Ex 6 ---");
+
+const convertRgbToHexa = (r, g, b) => '#' + [r, g, b]
+  .map(x => x.toString(16).padStart(2, '0'))
+  .join('');
+
+console.log(convertRgbToHexa(255, 51, 255));
