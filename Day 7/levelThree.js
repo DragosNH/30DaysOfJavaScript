@@ -221,3 +221,22 @@ const sumOfArgs = (...args) => {
 }
 
 sumOfArgs(1, 2, 3, 4, 5, 45);
+
+
+// 12. Write a function called sumOfArrayItems, it takes an array parameter and return the sum of all the items. Check if all the array items are number types. If not give return reasonable feedback.
+console.log("--- Ex 12 ---");
+
+const sumOfArrayItems = arr => {
+    sum = 0;
+    arr.forEach((ar) => {
+        if (typeof ar === "number") {
+            sum += ar
+        } else {
+            sum = `it's a string`
+        }
+    })
+    console.log(sum);
+    
+}
+
+sumOfArrayItems([1, 2, 3])
