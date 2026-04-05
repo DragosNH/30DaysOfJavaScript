@@ -240,3 +240,20 @@ const sumOfArrayItems = arr => {
 }
 
 sumOfArrayItems([1, 2, 3])
+
+// 13. Write a function called average, it takes an array parameter and returns the average of the items. Check if all the array items are number types. If not give return reasonable feedback.
+console.log("--- Ex 13 ---");
+
+average = (arr) => {
+    let sum = 0;
+    arr.forEach((ar) => {
+        if (typeof ar === "number") {
+            sum += ar;
+            sum = arr.length / sum;
+        } else {
+            sum = `it's a string`;
+        }
+    })
+    console.log(sum);
+}
+average([1, 2, 3]);
