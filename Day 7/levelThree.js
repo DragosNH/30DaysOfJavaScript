@@ -116,7 +116,53 @@ console.log(convertHexaToRgb('#51f1f1'));
 console.log("--- Ex 6 ---");
 
 const convertRgbToHexa = (r, g, b) => '#' + [r, g, b]
-  .map(x => x.toString(16).padStart(2, '0'))
-  .join('');
+.map(x => x.toString(16).padStart(2, '0'))
+.join('');
 
 console.log(convertRgbToHexa(255, 51, 255));
+
+// 7. Write a function generateColors which can generate any number of hexa or rgb colors.
+console.log("--- Ex 7 ---");
+
+const generateColors = (type, num) =>{
+    let hexCharacters = "0123456789ABCDEF";
+    let hexCode = [];
+    let rgbArray = [];
+
+    if (type === 'hexa'){
+        for(let i = 0; i < num; i++){
+            let hex = "";
+            for(let j = 0; j < 6; j++){
+                let index = Math.floor(Math.random() * hexCharacters.length);
+                hex += hexCharacters[index]
+            }
+            hexCode.push(`#${hex}`)
+        }
+        return hexCode;
+    }
+
+    const randomRgb = () => {
+        let randomColor = Math.floor(Math.random() * 255);
+        if(randomColor < 10){
+            return `00${randomColor}`
+        } else if(randomColor < 100){
+            return `0${randomColor}`
+        }
+
+        return randomColor
+    }
+
+    if (type === 'rgb'){
+        for (let i = 0; i < num; i++) {
+            rgbArray.push(`rgb(${randomRgb()},${randomRgb()},${randomRgb()})`)
+        }
+        return rgbArray;
+    }
+
+
+}
+
+console.log(generateColors('hexa', 3)) // ['#a3e12f', '#03ed55', '#eb3d2b']
+console.log(generateColors('hexa', 1)) // '#b334ef'
+console.log(generateColors('rgb', 3)) // ['rgb(5, 55, 175)', 'rgb(50, 105, 100)', 'rgb(15, 26, 80)']
+console.log(generateColors('rgb', 1)) // 'rgb(33,79, 176)'
