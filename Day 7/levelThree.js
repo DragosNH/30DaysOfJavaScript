@@ -208,3 +208,16 @@ const isEmpty = par => {
 
 isEmpty();
 
+// 11. Call your function sum, it takes any number of arguments and it returns the sum.
+console.log("--- Ex 11 ---");
+
+const sumOfArgs = (...args) => {
+    let sum = 0;
+    args.forEach((args) => {
+        sum += args
+    })
+
+    console.log(sum);
+}
+
+sumOfArgs(1, 2, 3, 4, 5, 45);
