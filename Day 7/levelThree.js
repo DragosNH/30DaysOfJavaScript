@@ -181,3 +181,16 @@ const shuffleArray = arr => {
 
 const array = [1, 2, 3, 4, 5];
 shuffleArray(array);
+
+// 9. Call your function factorial, it takes a whole number as a parameter and it return a factorial of the number.
+console.log("--- Ex 9 ---");
+
+const factorial = num => {
+    let factorial = 1;
+    for (let i = num; i > 0; i--) {
+
+        factorial *= i;
+    }
+    console.log(factorial);
+}
+factorial(5);
