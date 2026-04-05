@@ -194,3 +194,17 @@ const factorial = num => {
     console.log(factorial);
 }
 factorial(5);
+
+// 10. Call your function isEmpty, it takes a parameter and it checks if it is empty or not.
+console.log("--- Ex 10 ---");
+
+const isEmpty = par => {
+    if(par === undefined){
+        console.log("Is empty");
+    } else {
+        console.log(`The parameter is not empty because it has: ${par}`);
+    }
+}
+
+isEmpty();
+
