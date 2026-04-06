@@ -14,3 +14,4 @@ dog.legs = 4;
 dog.color = "Black";
 dog.age = 2;
 dog.bark = () => console.log("woof woof");
+
