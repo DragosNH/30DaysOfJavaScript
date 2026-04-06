@@ -22,7 +22,7 @@ console.log(Object.values(dog));
 dog.breed = "Beagle";
 
 dog.getInfo = () => {
-    console.log(`Dog: ${Object.values(this.dog)}`);
+    console.log(`Dog: ${Object.values(this)}`);
 }
 
-console.log(dog);
+console.log(dog.getInfo());
