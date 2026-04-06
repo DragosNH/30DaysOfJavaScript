@@ -3,3 +3,14 @@ console.log("------ Level 1 ------");
 
 // 1. Create an empty object called dog.
 const dog = {};
+
+// 2. Print the the dog object on the console;
+console.log(dog);
+
+
+// 3. Add name, legs, color, age and bark properties for the dog object. The bark property is a method which return woof woof.
+dog.name = "Barky";
+dog.legs = 4;
+dog.color = "Black";
+dog.age = 2;
+dog.bark = () => console.log("woof woof");
