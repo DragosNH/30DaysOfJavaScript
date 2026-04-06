@@ -13,5 +13,8 @@ dog.name = "Barky";
 dog.legs = 4;
 dog.color = "Black";
 dog.age = 2;
-dog.bark = () => console.log("woof woof");
+dog.bark = () => {return "woof woof"};
+
+// 4. Get name, legs, color, age and bark value from the dog object.
+console.log(Object.values(dog));
 
