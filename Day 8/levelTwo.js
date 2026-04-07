@@ -102,3 +102,29 @@ const mostPoints = () => {
   console.log("Users with >= 50 points:", usersWithPoints);
 }
 mostPoints();
+
+// 3. Find people who are MERN stack developer from the users object.
+console.log("--- Ex 3 ---");
+
+const mernDevelopper = () => {
+  const names = Object.keys(users);
+  let mernUser = [];
+
+  for (let i = 0; i < names.length; i++) {
+    let name = names[i];
+    let userSkill = users[name].skills
+    if (
+      userSkill.includes("React") &&
+      userSkill.includes("Redux") &&
+      userSkill.includes("MongoDB") &&
+      userSkill.includes("Express") &&
+      userSkill.includes("Node")
+    ) {
+      mernUser.push(name);
+    }
+  }
+
+  console.log(mernUser);
+
+}
+mernDevelopper();
