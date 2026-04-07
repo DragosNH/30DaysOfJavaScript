@@ -149,3 +149,8 @@ console.log(newUsers);
 console.log("--- Ex 5 ---");
 
 console.log(Object.keys(users));
+
+// 6. Get all the values of users object.
+console.log("--- Ex 6 ---");
+
+console.log(Object.values(users));
