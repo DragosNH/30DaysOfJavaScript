@@ -112,7 +112,8 @@ const mernDevelopper = () => {
 
   for (let i = 0; i < names.length; i++) {
     let name = names[i];
-    let userSkill = users[name].skills
+    let userSkill = users[name].skills;
+
     if (
       userSkill.includes("React") &&
       userSkill.includes("Redux") &&
@@ -128,3 +129,17 @@ const mernDevelopper = () => {
 
 }
 mernDevelopper();
+
+// 4. Set your name in the users object without modifying the original users object.
+
+const newUsers = users;
+
+newUsers["Dragos"] = {
+  email: 'dragos@dragos.com',
+  skills: ['HTML', 'CSS', 'JavaScript', 'Python', 'MySql', 'React', 'Three.js', 'Django', 'Flask', "C#"],
+  age: 4000,
+  isLoggedIn: true,
+  points: 80
+}
+
+console.log(newUsers);
