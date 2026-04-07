@@ -57,22 +57,48 @@ const users = {
 console.log("--- Ex 1 ---");
 
 const findManySkills = () => {
-    let maxSkills = 0;
-    let bestUser = "";
+  let maxSkills = 0;
+  let bestUser = "";
 
-    const names = Object.keys(users);
+  const names = Object.keys(users);
 
-    for (let i = 0; i < names.length; i++) {
-        let name = names[i];
-        let skillCount = users[name].skills.length;
+  for (let i = 0; i < names.length; i++) {
+    let name = names[i];
+    let skillCount = users[name].skills.length;
 
-        if (skillCount > maxSkills) {
-            maxSkills = skillCount;
-            bestUser = name;
-        }
+    if (skillCount > maxSkills) {
+      maxSkills = skillCount;
+      bestUser = name;
     }
+  }
 
-    console.log(bestUser);
+  console.log(bestUser);
 }
 
 findManySkills();
+
+// 2. Count logged in users, count users having greater than equal to 50 points from the following object.
+console.log("--- Ex 2 ---");
+
+const mostPoints = () => {
+  const names = Object.keys(users);
+
+  let usersWithPoints = [];
+  let loggedInCount = 0;
+
+  for (let i = 0; i < names.length; i++) {
+    let name = names[i];
+
+    if (users[name].isLoggedIn === true) {
+      loggedInCount++;
+    }
+
+    if (users[name].points >= 50) {
+      usersWithPoints.push(name);
+    }
+  }
+
+  console.log("Logged in users:", loggedInCount);
+  console.log("Users with >= 50 points:", usersWithPoints);
+}
+mostPoints();
