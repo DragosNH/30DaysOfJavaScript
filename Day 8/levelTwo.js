@@ -131,6 +131,7 @@ const mernDevelopper = () => {
 mernDevelopper();
 
 // 4. Set your name in the users object without modifying the original users object.
+console.log("--- Ex 4 ---");
 
 const newUsers = users;
 
@@ -143,3 +144,8 @@ newUsers["Dragos"] = {
 }
 
 console.log(newUsers);
+
+// 5. Get all keys or properties of users object.
+console.log("--- Ex 5 ---");
+
+console.log(Object.keys(users));
