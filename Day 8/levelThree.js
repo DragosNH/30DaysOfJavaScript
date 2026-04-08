@@ -149,5 +149,62 @@ const signIn = (username) => {
     console.log("User not found");
 }
 
+signIn('Martha');
 
-signIn('Martha')
+// 3. The products array has three elements and each of them has six properties. 
+console.log("--- 3 ----");
+// a. Create a function called rateProduct which rates the product 
+console.log("- a -");
+
+const rateProduct = (productId, userId, rate) => {
+
+    let found = false;
+
+    for (let i = 0; i < products.length; i++) {
+
+        if (products[i]._id === productId) {
+            products[i].ratings.push({ userId: userId, rate: rate });
+            found = true;
+            console.log("Product rated successfully");
+            break;
+        }
+    }
+
+    if (!found) {
+        console.log("This product does not exist");
+    }
+};
+
+rateProduct('aegfal', 'fg12cy', 5);
+console.log(products);
+
+// b. Create a function called averageRating which calculate the average rating of a product.
+console.log("- b -");
+
+const averageRating = (productId) => {
+
+    const product = products.find(p => p._id === productId);
+
+    if (!product) {
+        console.log("Product not found");
+        return;
+    }
+
+    if (product.ratings.length === 0) {
+        console.log("No ratings yet");
+        return 0;
+    }
+
+    let total = 0;
+
+    for (let i = 0; i < product.ratings.length; i++) {
+        total += product.ratings[i].rate;
+    }
+
+    const average = total / product.ratings.length;
+
+    console.log(`Average rating: ${average}`);
+    return average;
+};
+
+averageRating('eedfcf');
