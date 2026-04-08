@@ -94,7 +94,9 @@ const products = [
 
 // Imagine you are getting the above users collection from a MongoDB database. 
 // a. Create a function called signUp which allows user to add to the collection. If user exists, inform the user that he has already an account.
-// b. Create a function called signIn which allows user to sign in to the application
+console.log("--- 2 ----");
+console.log("- a -");
+
 
 const signUp = (id, username, email, password, createdAt, isLoggedIn) => {
 
@@ -123,3 +125,29 @@ const signUp = (id, username, email, password, createdAt, isLoggedIn) => {
 
 signUp("bb8", "Bob", "bob@bob.com", "123456", '08/01/2020 10:00 AM', true);
 signUp("bb8", "Thomas", "bob@bob.com", "123456", '08/01/2020 10:00 AM', true);
+
+// b. Create a function called signIn which allows user to sign in to the application
+console.log("- b -");
+
+const signIn = (username) => {
+
+    for (let i = 0; i < users.length; i++) {
+
+        if (users[i].username === username) {
+
+            if (users[i].isLoggedIn) {
+                console.log(`${username} is already logged in`);
+            } else {
+                users[i].isLoggedIn = true;
+                console.log(`${username} is now online`);
+            }
+
+            return;
+        }
+    }
+
+    console.log("User not found");
+}
+
+
+signIn('Martha')
