@@ -1,0 +1,23 @@
+// ------ Level 1 ------
+console.log("------ Level 1 ------");
+
+const countries = ['Finland', 'Sweden', 'Denmark', 'Norway', 'IceLand']
+const names = ['Asabeneh', 'Mathias', 'Elias', 'Brook']
+const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+const products = [
+  { product: 'banana', price: 3 },
+  { product: 'mango', price: 6 },
+  { product: 'potato', price: ' ' },
+  { product: 'avocado', price: 8 },
+  { product: 'coffee', price: 10 },
+  { product: 'tea', price: '' },
+]
+
+// 1. Explain the difference between forEach, map, filter, and reduce.
+
+/*
+forEach is used only in arrays. 
+map iterates arrays and modifies the elements.
+filter filters out elements and modifies them. 
+reduce takes multiple values and returns a single value.
+*/
