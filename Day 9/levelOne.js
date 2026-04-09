@@ -64,3 +64,9 @@ console.log("--- Ex 9 ---");
 
 const uperName = names.map((name) => name.toUpperCase());
 console.log(uperName);
+
+// 10. Use map to map the products array to its corresponding prices.
+console.log("--- Ex 10 ---");
+
+const prices = products.map((price) => price.price);
+console.log(prices);
