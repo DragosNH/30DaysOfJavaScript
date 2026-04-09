@@ -35,3 +35,8 @@ countries.forEach(country => console.log(country));
 // 4. Use forEach to console.log each name in the names array.
 console.log("--- Ex 4 ---");
 names.forEach(name => console.log(name));
+
+// 5. Use forEach to console.log each number in the numbers array.
+console.log("--- Ex 5 ---");
+
+numbers.forEach(num => console.log(num));
