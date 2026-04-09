@@ -23,7 +23,11 @@ reduce takes multiple values and returns a single value.
 */
 
 // 2. Define a callback function before you use it in forEach, map, filter or reduce.
-
 const callback = n => {
     return n * 2;
 }
+
+// 3. Use forEach to console.log each country in the countries array.
+console.log("--- Ex 3 ---");
+
+countries.forEach(country => console.log(country));
