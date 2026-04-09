@@ -31,3 +31,7 @@ const callback = n => {
 console.log("--- Ex 3 ---");
 
 countries.forEach(country => console.log(country));
+
+// 4. Use forEach to console.log each name in the names array.
+console.log("--- Ex 4 ---");
+names.forEach(name => console.log(name));
