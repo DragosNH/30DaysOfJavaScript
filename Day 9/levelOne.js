@@ -94,3 +94,11 @@ console.log("--- Ex 14 ---");
 
 const noECountries = countries.filter(country => !country.includes("e"));
 console.log(noECountries);
+
+// 15. Use filter to filter out only prices with values.
+
+const noValuePrices = products.filter(
+  item => item.price === '' || item.price.toString().trim() === ''
+);
+
+console.log(noValuePrices);
