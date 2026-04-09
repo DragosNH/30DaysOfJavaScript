@@ -82,3 +82,15 @@ console.log("--- Ex 12 ---");
 
 const sixChar = countries.filter(country => country.length !== 6);
 console.log(sixChar);
+
+// 13. Use filter to filter out countries containing six letters and more in the country array.
+console.log("--- Ex 13 ---");
+
+const lessThanSix = countries.filter(country => country < 6);
+console.log(lessThanSix);
+
+// 14. Use filter to filter out country start with 'E';
+console.log("--- Ex 14 ---");
+
+const noECountries = countries.filter(country => !country.includes("e"));
+console.log(noECountries);
