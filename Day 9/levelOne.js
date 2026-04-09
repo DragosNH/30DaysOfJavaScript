@@ -70,3 +70,9 @@ console.log("--- Ex 10 ---");
 
 const prices = products.map((price) => price.price);
 console.log(prices);
+
+// 11. Use filter to filter out countries containing land.
+console.log("--- Ex 11 ---");
+
+const landCountries = countries.filter(country => country.includes('land'));
+console.log(landCountries);
