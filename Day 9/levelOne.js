@@ -59,3 +59,8 @@ console.log("--- Ex 8 ---");
 const squareNumber = numbers.map((square) => square**2);
 console.log(squareNumber);
 
+// 9. Use map to change to each name to uppercase in the names array.
+console.log("--- Ex 9 ---");
+
+const uperName = names.map((name) => name.toUpperCase());
+console.log(uperName);
