@@ -21,3 +21,9 @@ map iterates arrays and modifies the elements.
 filter filters out elements and modifies them. 
 reduce takes multiple values and returns a single value.
 */
+
+// 2. Define a callback function before you use it in forEach, map, filter or reduce.
+
+const callback = n => {
+    return n * 2;
+}
