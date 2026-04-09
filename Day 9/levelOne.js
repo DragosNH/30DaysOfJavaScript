@@ -76,3 +76,9 @@ console.log("--- Ex 11 ---");
 
 const landCountries = countries.filter(country => country.includes('land'));
 console.log(landCountries);
+
+// 12. Use filter to filter out countries having six character.
+console.log("--- Ex 12 ---");
+
+const sixChar = countries.filter(country => country.length !== 6);
+console.log(sixChar);
