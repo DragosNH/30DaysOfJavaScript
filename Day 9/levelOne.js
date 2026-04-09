@@ -52,3 +52,10 @@ console.log("--- Ex 7 ---");
 
 const countriesArray = countries.map((country) => country.length);
 console.log(countriesArray);
+
+// 8. Use map to create a new array by changing each number to square in the numbers array.
+console.log("--- Ex 8 ---");
+
+const squareNumber = numbers.map((square) => square**2);
+console.log(squareNumber);
+
