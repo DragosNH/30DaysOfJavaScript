@@ -40,3 +40,9 @@ names.forEach(name => console.log(name));
 console.log("--- Ex 5 ---");
 
 numbers.forEach(num => console.log(num));
+
+// 6. Use map to create a new array by changing each country to uppercase in the countries array.
+console.log("--- Ex 6 ---");
+
+const uppercaseCountries = countries.map((country) => country.toUpperCase());
+console.log(uppercaseCountries);
