@@ -46,3 +46,9 @@ console.log("--- Ex 6 ---");
 
 const uppercaseCountries = countries.map((country) => country.toUpperCase());
 console.log(uppercaseCountries);
+
+// 7. Use map to create an array of countries length from countries array.
+console.log("--- Ex 7 ---");
+
+const countriesArray = countries.map((country) => country.length);
+console.log(countriesArray);
