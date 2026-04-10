@@ -96,9 +96,23 @@ const noECountries = countries.filter(country => !country.includes("e"));
 console.log(noECountries);
 
 // 15. Use filter to filter out only prices with values.
+console.log("--- Ex 15 ---");
 
 const noValuePrices = products.filter(
   item => item.price === '' || item.price.toString().trim() === ''
 );
 
 console.log(noValuePrices);
+
+// 16. Declare a function called getStringLists which takes an array as a parameter and then returns an array only with string items.
+console.log("--- Ex 16 ---");
+
+const getStringLists = arr => {
+  let filter = arr.filter(item => {
+    return typeof item === "string";
+  });
+
+  return filter;
+}
+
+console.log(getStringLists(["Body", 52, "yes", true, "no", false, "maybe"]));
