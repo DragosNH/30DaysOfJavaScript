@@ -116,3 +116,9 @@ const getStringLists = arr => {
 }
 
 console.log(getStringLists(["Body", 52, "yes", true, "no", false, "maybe"]));
+
+// 17. Use reduce to sum all the numbers in the numbers array.
+console.log("--- Ex 17 ---");
+
+const sum = numbers.reduce((acc, cur) => acc + cur, 0)
+console.log(sum);
