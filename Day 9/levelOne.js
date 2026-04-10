@@ -127,3 +127,21 @@ console.log(sum);
 console.log("--- Ex 18 ---");
 const concatenatedCountries = countries.reduce((acc, curr) => acc + ", " + curr);
 console.log(concatenatedCountries + " are north European countries.");
+
+// 19. Explain the difference between some and every
+/* 
+some() stops iterating and returns true immediately upon finding the first element that passes the test. 
+every() stops iterating and returns false immediately upon finding the first element that fails the test. 
+*/
+
+// 20. Use some to check if some names' length greater than seven in names array.
+console.log("--- Ex 19 ---");
+
+const someNames = names.some(name => name.length > 7);
+console.log(someNames);
+
+// 21. Use every to check if all the countries contain the word land.
+console.log("--- Ex 20 ---");
+
+const checkLandContries = countries.every(country => country.includes("land"));
+console.log(checkLandContries);
