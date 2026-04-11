@@ -158,3 +158,8 @@ console.log("--- Ex 23 ---");
 const findCountry = countries.find(country => country.length === 6);
 console.log(findCountry);
 
+// 24. Use findIndex to find the position of the first country containing only six letters in the countries array.
+console.log("--- Ex 24 ---");
+
+const findFirstCountry = countries.findIndex(country => country.length === 6);
+console.log(findFirstCountry);
