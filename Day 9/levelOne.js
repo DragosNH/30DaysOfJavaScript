@@ -145,3 +145,9 @@ console.log("--- Ex 20 ---");
 
 const checkLandContries = countries.every(country => country.includes("land"));
 console.log(checkLandContries);
+
+// 22. Explain the difference between find and findIndex.
+/*
+ find() returns the first element in the array that satisfies a condition
+ findIndex() returns the index of that element
+ */
