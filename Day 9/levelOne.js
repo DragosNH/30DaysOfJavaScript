@@ -163,3 +163,11 @@ console.log("--- Ex 24 ---");
 
 const findFirstCountry = countries.findIndex(country => country.length === 6);
 console.log(findFirstCountry);
+
+// 25. Use findIndex to find the position of Norway if it doesn't exist in the array you will get -1.
+console.log("--- Ex 25 ---");
+
+const findNorway = countries.findIndex(nor => nor.includes('Norway'));
+console.log(findNorway);
+
+// 26. Use findIndex to find the position of Russia if it doesn't exist in the array you will get -1.
