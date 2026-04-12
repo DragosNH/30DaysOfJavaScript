@@ -277,3 +277,22 @@ console.log("--- Ex 6 ---");
 
 const getLastTenCountries = countries.filter(country => countries.indexOf(country) > countries.length-10);
 console.log(getLastTenCountries);
+
+// 7. Find out which letter is used many times as initial for a country name from the countries array (eg. Finland, Fiji, France etc).
+console.log("--- Ex 7 ---");
+
+let frequentFirstLetter = Object.entries(countries.map(c => c[0]).reduce((acc,cur) => {
+   acc[cur] = (acc[cur] || 0) +1;
+   return acc;
+}, {})).reduce((obj, cur) => {
+   obj.max = (obj.max || cur[1]);
+   obj.letter = (obj.letter || '');
+
+   if (obj.max < cur[1]) {
+      obj.max = cur[1];
+      obj.letter = cur[0];
+   }
+   return obj;
+}, {}).letter;
+
+console.log(frequentFirstLetter);
