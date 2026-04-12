@@ -271,3 +271,9 @@ console.log("--- Ex 5 ---");
 
 const getFirstTenCountries = countries.filter(country => countries.indexOf(country) < 10);
 console.log(getFirstTenCountries);
+
+// 6. Declare a getLastTenCountries function which which returns the last ten countries in the countries array.
+console.log("--- Ex 6 ---");
+
+const getLastTenCountries = countries.filter(country => countries.indexOf(country) > countries.length-10);
+console.log(getLastTenCountries);
