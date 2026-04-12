@@ -256,3 +256,13 @@ const categorizeCountries = () => {
 }
 
 categorizeCountries();
+
+// 4. Create a function which return an array of objects, which is the letter and the number of times the letter use to start with a name of a country.
+console.log("--- Ex 4 ---");
+
+let frequentLetterList = countries.map(c => c[0]).reduce((obj, cur) => {
+   obj[cur] = (obj[cur] || 0) +1;
+   return obj;
+}, {})
+console.log(frequentLetterList);
+
