@@ -266,3 +266,8 @@ let frequentLetterList = countries.map(c => c[0]).reduce((obj, cur) => {
 }, {})
 console.log(frequentLetterList);
 
+// 5. Declare a getFirstTenCountries function and return an array of ten countries. Use different functional programming to work on the countries.js array.
+console.log("--- Ex 5 ---");
+
+const getFirstTenCountries = countries.filter(country => countries.indexOf(country) < 10);
+console.log(getFirstTenCountries);
