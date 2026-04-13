@@ -2916,4 +2916,14 @@ const mostSpokenLanguages = (countriesArray, topN) => {
     return mostSpoken;
 };
 
-console.log(mostSpokenLanguages(countries_data, 3));
+// console.log(mostSpokenLanguages(countries_data, 3));
+
+// 3. Use countries_data.js file create a function which create the ten most populated countries
+
+const mostPopulatedCountries = (countriesArray, topN) => {
+    return [...countriesArray]
+        .sort((a, b) => b.population - a.population)
+        .slice(0, topN);
+};
+
+console.log(mostPopulatedCountries(countries_data, 3));
