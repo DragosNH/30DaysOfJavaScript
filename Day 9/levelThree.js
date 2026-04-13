@@ -2898,10 +2898,22 @@ const countriesByPopulation = () => {
 
 // 2. Find the 10 most spoken languages.
 
-let mostSpoken = Object.entries(countries_data.reduce((langs, obj) => { obj.languages.forEach(x => langs.push(x));
-   return langs;
-}, []).reduce((dict, lang) => {
-   dict[lang] = (dict[lang] || 0) +1;
-   return dict;
-}, {})).sort((a, b) => b[1]-a[1]);
-// mostSpoken.forEach(x => console.log(x));
+const mostSpokenLanguages = (countriesArray, topN) => {
+    const mostSpoken = Object.entries(
+        countriesArray
+            .reduce((langs, country) => {
+                country.languages.forEach(lang => langs.push(lang));
+                return langs;
+            }, [])
+            .reduce((dict, lang) => {
+                dict[lang] = (dict[lang] || 0) + 1;
+                return dict;
+            }, {})
+    )
+    .sort((a, b) => b[1] - a[1])
+    .slice(0, topN);
+
+    return mostSpoken;
+};
+
+console.log(mostSpokenLanguages(countries_data, 3));
