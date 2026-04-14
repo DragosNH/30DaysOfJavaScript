@@ -21,4 +21,12 @@ let B = new Set(b)
 c = a.filter((num) => B.has(num))
 C = new Set(c)
 
+console.log(C);
+
+// 3.Find a with b
+console.log("--- Ex 3 ---");
+
+c = a.filter((num) => !B.has(num))
+C = new Set(c)
+
 console.log(C)
