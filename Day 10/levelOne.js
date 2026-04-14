@@ -11,3 +11,9 @@ console.log("--- Ex 1 ---");
 const epmtySet = new Set();
 console.log(epmtySet);
 
+// 2. Create a set containing 0 to 10 using loop.
+console.log("--- Ex 2 ---");
+
+const oneToTen = [1,2,3,4,5,6,7,8,9,10];
+const setOneToTen = new Set(oneToTen)
+console.log(setOneToTen);
