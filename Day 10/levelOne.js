@@ -23,3 +23,9 @@ console.log("--- Ex 3 ---");
 
 setOneToTen.delete(5);
 console.log(setOneToTen);
+
+// 4. Clear a set.
+console.log("--- Ex 4 ---");
+
+setOneToTen.clear();
+console.log(setOneToTen);
