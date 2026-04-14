@@ -17,3 +17,9 @@ console.log("--- Ex 2 ---");
 const oneToTen = [1,2,3,4,5,6,7,8,9,10];
 const setOneToTen = new Set(oneToTen)
 console.log(setOneToTen);
+
+// 3. Remove an element from a set.
+console.log("--- Ex 3 ---");
+
+setOneToTen.delete(5);
+console.log(setOneToTen);
