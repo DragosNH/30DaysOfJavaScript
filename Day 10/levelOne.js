@@ -37,3 +37,15 @@ const stringsArray = ["yes", "no", "maybe", "tommorrow", "yesterday"];
 const stringsArraySet = new Set(stringsArray);
 console.log(stringsArraySet);
  
+// 6. Create a map of countries and number of characters of a country.
+console.log("--- Ex 6 ---");
+
+const newCountries =[
+    ["Finland", "Finland".length],
+    ["France", "France".length],
+    ["Fiji", "Fiji".length],
+]
+
+const countriesMap = new Map(newCountries);
+console.log(countriesMap);
+
