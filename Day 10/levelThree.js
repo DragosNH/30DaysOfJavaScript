@@ -2877,12 +2877,12 @@ countries_data.forEach(country => {
     });
 });
 
-// 2. Use the countries data to find the 10 most spoken languages:
-console.log("--- Ex 2 ---");
-
 const uniqueLanguages = new Set(allLanguages);
 
 console.log(uniqueLanguages.size);
+
+// 2. Use the countries data to find the 10 most spoken languages:
+console.log("--- Ex 2 ---");
 
 const mostSpokenLanguage = (countriesArray) => {
     const languageCount = {};
