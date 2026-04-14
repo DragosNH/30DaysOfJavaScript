@@ -11,3 +11,14 @@ let c = [...a, ...b]
 let C = new Set(c);
 
 console.log(C);
+
+// 2. Find a intersection b.
+console.log("--- Ex 2 ---");
+
+let A = new Set(a)
+let B = new Set(b)
+
+c = a.filter((num) => B.has(num))
+C = new Set(c)
+
+console.log(C)
