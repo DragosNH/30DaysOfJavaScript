@@ -29,3 +29,11 @@ console.log("--- Ex 4 ---");
 
 setOneToTen.clear();
 console.log(setOneToTen);
+
+// 5. Create a set of 5 string elements from array.
+console.log("--- Ex 5 ---");
+
+const stringsArray = ["yes", "no", "maybe", "tommorrow", "yesterday"];
+const stringsArraySet = new Set(stringsArray);
+console.log(stringsArraySet);
+ 
