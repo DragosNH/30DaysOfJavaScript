@@ -2865,3 +2865,36 @@ const countries_data = [
 			"area": 390757
 	}
 ]
+
+// 1. How many languages are there in the countries object file.
+console.log("--- Ex 1 ---");
+
+const allLanguages = [];
+
+countries_data.forEach(country => {
+    country.languages.forEach(lang => {
+        allLanguages.push(lang);
+    });
+});
+
+// 2. Use the countries data to find the 10 most spoken languages:
+console.log("--- Ex 2 ---");
+
+const uniqueLanguages = new Set(allLanguages);
+
+console.log(uniqueLanguages.size);
+
+const mostSpokenLanguage = (countriesArray) => {
+    const languageCount = {};
+
+    countriesArray.forEach(country => {
+        country.languages.forEach(lang => {
+            languageCount[lang] = (languageCount[lang] || 0) + 1;
+        });
+    });
+
+    return Object.entries(languageCount)
+        .sort((a, b) => b[1] - a[1])[0];
+};
+
+console.log(mostSpokenLanguage(countries_data));
