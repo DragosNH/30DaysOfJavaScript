@@ -64,3 +64,13 @@ console.log(gravity);
 console.log(humanBodyTemp);
 console.log(waterBoilingTemp);
 
+// 2. Destructure and assign the elements of countries array to fin, est, sw, den, nor
+console.log("--- Ex 2 ---");
+
+let [fin, est, sw, den, nor] = countries;
+console.log(fin);
+console.log(est);
+console.log(sw);
+console.log(den);
+console.log(nor);
+
