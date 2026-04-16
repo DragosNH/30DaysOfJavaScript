@@ -74,3 +74,8 @@ console.log(sw);
 console.log(den);
 console.log(nor);
 
+// 3. Destructure the rectangle object by its properties or keys.
+console.log("--- Ex 3 ---");
+
+let {width: w, height:h, area: a, perimeter: p} = rectangle;
+console.log(w, h, a, p);
