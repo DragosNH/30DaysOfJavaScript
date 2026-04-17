@@ -23,3 +23,16 @@ const distance = sorted[sorted.length - 1] - sorted[0];
 
 console.log(sorted);
 console.log(distance);
+
+// 3. Write a pattern which identify if a string is a valid JavaScript variable.
+console.log("--- Ex 3 ---");
+
+const is_valid_variable = (str) => {
+    const pattern = /^[a-zA-Z_$][a-zA-Z0-9_$]*$/;
+    console.log(pattern.test(str));
+};
+
+is_valid_variable('first_name') 
+is_valid_variable('first-name') 
+is_valid_variable('1first_name') 
+is_valid_variable('firstname')
