@@ -10,3 +10,8 @@ console.assert(10 > 2 * 10, '10 is not greater than 2 * 10');
 console.log("--- Ex 2 ---");
 
 console.warn("Warning! You have been warned.");
+
+// 3. Write an error message using console.error().
+console.log("--- Ex 3 ---");
+
+console.error("Error! you have been warned.")
