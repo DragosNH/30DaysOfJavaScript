@@ -1,0 +1,4 @@
+// --------- Level 1 ---------
+console.log("------ Level 1 ------");
+
+// 1. Create an Animal class. The class will have name, age, color, legs properties and create different methods.
