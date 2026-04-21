@@ -56,3 +56,29 @@ console.log('Max: ', statistics.max());
 console.log('Range: ', statistics.range());
 console.log('Median: ', statistics.median());
 console.log('Mode: ', statistics.mode());
+
+// 2. Create a class called PersonAccount. It has firstname, lastname, incomes, expenses properties and it has totalIncome, totalExpense, accountInfo,addIncome, addExpense and accountBalance methods. Incomes is a set of incomes and its description and expenses is also a set of expenses and its description.
+
+class PersonAccount{
+    constructor(firstName = "John",
+        lastName = "Doe",
+        income = 1500,
+        expenses = 1300,
+        properties = ["Appartment"],
+    ){
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.income = income;
+        this.expenses = expenses;
+        this.properties = properties;
+    }
+
+    get getInfo(){
+        return `Name: ${this.firstName + " " + this.lastName}\nIncome: ${this.income}\nExpenses: ${this.expenses}\nProperties: ${this.properties.join(", ")}`
+    }
+
+
+}
+
+let billy = new PersonAccount("Wiliam", "McCarty", 2000, 1800, ["House", "Car", "Garage"])
+console.log(billy.getInfo);
