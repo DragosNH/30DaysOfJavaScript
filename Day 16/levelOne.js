@@ -128,3 +128,8 @@ let stringMarried = JSON.stringify(isMarried);
 console.log(stringMarried);
 console.log(typeof(stringMarried));
 
+// 4. Stringify the student object.
+console.log("--- Ex 4 ---");
+
+let stringStudent = JSON.stringify(student, undefined, 4);
+console.log(stringStudent);
