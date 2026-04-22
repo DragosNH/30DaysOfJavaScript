@@ -112,3 +112,15 @@ console.log("--- Ex 1 ---");
 
 let textObj = JSON.parse(txt, undefined, 4);
 console.log(typeof(textObj));
+
+// 2. Find the user who has many skills from the variable stored in txt.
+console.log("--- Ex 2 ---");
+
+let filteredJSON = JSON.parse(txt, (key, value) => {
+  let max = 0;
+  max = max < value.length ? value.length: max;
+  
+  return max > value.length ? undefined: value;
+})
+
+console.log(filteredJSON);
