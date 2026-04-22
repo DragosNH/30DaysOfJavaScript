@@ -119,3 +119,12 @@ console.log("--- Ex 2 ---");
 
 let stringAge = JSON.stringify(age)
 console.log(stringAge);
+console.log(typeof(stringAge));
+
+// 3. Stringify the isMarried variable.
+console.log("--- Ex 3 ---");
+
+let stringMarried = JSON.stringify(isMarried);
+console.log(stringMarried);
+console.log(typeof(stringMarried));
+
