@@ -18,3 +18,9 @@ console.log(firstP);
 console.log(secondP);
 console.log(thirdP);
 console.log(firstP);
+
+// 3. Get all the p as nodeList using document.querySelectorAll(tagname) and by their tag name.
+console.log("--- Ex 3 ---");
+
+const allPars = document.querySelectorAll('p');
+console.log(allPars);
