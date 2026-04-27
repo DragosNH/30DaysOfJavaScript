@@ -48,3 +48,18 @@ thirdP.id = "id3";
 forurthP.id = "id4";
 
 console.log(firstP, secondP, thirdP, forurthP);
+
+
+// --------- Level 2 ---------
+console.log("------ Level 2 ------");
+
+// 1.Change stye of each paragraph using JavaScript(eg. color, background, border, font-size, font-family).
+console.log("--- Ex 1 ---");
+
+for(let i = 0; i < allPars.length; i++){
+    allPars[i].style.color = "#f5f5f5";
+    allPars[i].style.background = "#3f3dddff";
+    allPars[i].style.border = "5px dotted green";
+    allPars[i].style.fontSize = "2em";
+    allPars[i].style.fontFamily = "Helvetica";
+}
