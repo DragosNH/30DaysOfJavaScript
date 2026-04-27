@@ -36,3 +36,15 @@ for(let i = 0; i < allPars.length; i++ ){
 console.log("--- Ex 5 ---");
 
 allPars[3].innerText = "Paragraph changed";
+
+// 6. Set id and class attribute for all the paragraphs using different attribute setting methods.
+firstP.classList.add('class1');
+secondP.classList.add('class1');
+thirdP.classList.add('class1');
+
+firstP.id = "id1";
+secondP.id = "id2";
+thirdP.id = "id3";
+forurthP.id = "id4";
+
+console.log(firstP, secondP, thirdP, forurthP);
