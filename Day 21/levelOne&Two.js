@@ -73,3 +73,10 @@ for(let i = 0; i < allPars.length; i++){
         allPars[i].style.color = "crimson";
     }
 }
+
+// 3. Set text content, id and class to each paragraph
+for(let i = 0; i < allPars.length; i++){
+    allPars[i].textContent = `Paragraph n°${i+1}`
+    allPars[i].id = `id${i+1}`
+    allPars[i].classList.add(`id${i+2}`) 
+}
