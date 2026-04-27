@@ -35,4 +35,4 @@ for(let i = 0; i < allPars.length; i++ ){
 // 5. Set a text content to paragraph the fourth paragraph,Fourth Paragraph.
 console.log("--- Ex 5 ---");
 
-allPars[3].innerText = "Paragraph changed"
+allPars[3].innerText = "Paragraph changed";
