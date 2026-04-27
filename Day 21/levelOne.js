@@ -24,3 +24,10 @@ console.log("--- Ex 3 ---");
 
 const allPars = document.querySelectorAll('p');
 console.log(allPars);
+
+// 4. Loop through the nodeList and get the text content of each paragraph.
+console.log("--- Ex 4 ---");
+
+for(let i = 0; i < allPars.length; i++ ){
+    console.log(allPars[i]);
+}
