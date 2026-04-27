@@ -69,3 +69,17 @@ function randomBkColor() {
 }
 
 setInterval(randomBkColor, 1000);
+
+
+// ------ Completed challenge has background green ------
+const listElements = document.querySelectorAll("li");
+
+listElements[0].style.background = "green";
+
+// ------ Ongoing challenge has background yellow ------
+listElements[1].style.background = "yellow";
+
+// ------ Coming challenges have background red ------
+for(let i = 0; i < listElements.length; i++){
+    listElements[i + 2].style.background = "red";
+}
