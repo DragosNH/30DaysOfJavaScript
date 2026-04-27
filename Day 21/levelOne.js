@@ -31,3 +31,8 @@ console.log("--- Ex 4 ---");
 for(let i = 0; i < allPars.length; i++ ){
     console.log(allPars[i]);
 }
+
+// 5. Set a text content to paragraph the fourth paragraph,Fourth Paragraph.
+console.log("--- Ex 5 ---");
+
+allPars[3].innerText = "Paragraph changed"
