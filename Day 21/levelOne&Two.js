@@ -63,3 +63,13 @@ for(let i = 0; i < allPars.length; i++){
     allPars[i].style.fontSize = "2em";
     allPars[i].style.fontFamily = "Helvetica";
 }
+
+// 2. Select all paragraphs and loop through each elements and give the first and third paragraph a color of green, and the second and the fourth paragraph a red color.
+
+for(let i = 0; i < allPars.length; i++){
+    if(i % 2 === 0){
+        allPars[i].style.color = "darkgreen";
+    } else {
+        allPars[i].style.color = "crimson";
+    }
+}
