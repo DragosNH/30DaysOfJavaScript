@@ -6,11 +6,21 @@ container.classList = "container";
 const inputBar = document.createElement('input');
 inputBar.type = "number";
 inputBar.name = "number";
+inputBar.placeholder = "Generate more numbers...";
+inputBar.style.width = "400px"
+inputBar.style.border = "1px solid green";
+inputBar.style.padding = "5px";
 
 const inputBtn = document.createElement('input');
 inputBtn.type = "submit";
 inputBtn.value = "Generate numbers";
 inputBtn.name = "number";
+inputBtn.style.background = "green";
+inputBtn.style.color = "white";
+inputBtn.style.border = "1px solid green";
+inputBtn.style.padding = "5px";
+inputBtn.style.marginLeft = "10px";
+
 
 document.body.appendChild(container);
 container.appendChild(inputBar);
