@@ -28,3 +28,20 @@ const planets = {
         gravity : 1.12
     }
 }
+
+function getPlanet() {
+
+    Object.keys(planets).forEach((planet) => {
+
+        const option = document.createElement("option");
+
+        option.value = planet;
+        option.textContent = planet;
+
+        planetsList.appendChild(option);
+
+    });
+
+}
+
+getPlanet();
