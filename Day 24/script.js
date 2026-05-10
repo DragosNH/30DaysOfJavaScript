@@ -31,11 +31,6 @@ const planets = {
     }
 }
 
-const containerAssets = txt => {
-    let newTxt = document.createElement("p");
-    newTxt.textContent = txt;
-    container.appendChild(newTxt);
-}
 
 function getPlanet() {
 
@@ -53,6 +48,12 @@ function getPlanet() {
 }
 
 getPlanet();
+
+const containerAssets = txt => {
+    let newTxt = document.createElement("p");
+    newTxt.textContent = `${input.value} kg on Earth are ${txt} kg on ${planetsList.value.charAt(0).toUpperCase() + planetsList.value.slice(1)} `;
+    container.appendChild(newTxt);
+}
 
 btn.addEventListener("click", () => {
     container.innerHTML = "";
