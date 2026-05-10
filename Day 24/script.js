@@ -1,6 +1,8 @@
 const input = document.querySelector(".input");
 const planetsList = document.querySelector("#calculator");
 const btn = document.querySelector(".btn");
+const container = document.querySelector(".container");
+let weight;
 
 const planets = {
     mercury:{
@@ -29,6 +31,12 @@ const planets = {
     }
 }
 
+const containerAssets = txt => {
+    let newTxt = document.createElement("p");
+    newTxt.textContent = txt;
+    container.appendChild(newTxt);
+}
+
 function getPlanet() {
 
     Object.keys(planets).forEach((planet) => {
@@ -36,7 +44,7 @@ function getPlanet() {
         const option = document.createElement("option");
 
         option.value = planet;
-        option.textContent = planet;
+        option.textContent = planet.charAt(0).toUpperCase() + planet.slice(1);
 
         planetsList.appendChild(option);
 
@@ -45,3 +53,9 @@ function getPlanet() {
 }
 
 getPlanet();
+
+btn.addEventListener("click", () => {
+    container.innerHTML = "";
+    weight = Number(input.value) * planets[planetsList.value].gravity;
+    containerAssets(weight);
+})
